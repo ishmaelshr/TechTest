@@ -13,12 +13,13 @@ public class UsersController : Controller
     public UsersController(IUserService userService) => _userService = userService;
 
     private UserListViewModel createUserListViewModel(IEnumerable<User> users){
-        var userListItemViewModel = users.Select(p => new UserListItemViewModel{
-            Id = p.Id,
-            Forename = p.Forename,
-            Surname = p.Surname,
-            Email = p.Email,
-            IsActive = p.IsActive
+        var userListItemViewModel = users.Select(u => new UserListItemViewModel{
+            Id = u.Id,
+            Forename = u.Forename,
+            Surname = u.Surname,
+            Email = u.Email,
+            DateOfBirth = u.DateOfBirth,
+            IsActive = u.IsActive
         });
 
         var userListViewModel = new UserListViewModel{
