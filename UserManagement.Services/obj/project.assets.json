@@ -573,11 +573,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/Ishmael/github/TechTest/UserManagement.Services/UserManagement.Services.csproj",
+      "projectUniqueName": "/Users/Ishmael/Workspace/TechTest/UserManagement.Services/UserManagement.Services.csproj",
       "projectName": "UserManagement.Services",
-      "projectPath": "/Users/Ishmael/github/TechTest/UserManagement.Services/UserManagement.Services.csproj",
+      "projectPath": "/Users/Ishmael/Workspace/TechTest/UserManagement.Services/UserManagement.Services.csproj",
       "packagesPath": "/Users/ishmael/.nuget/packages/",
-      "outputPath": "/Users/Ishmael/github/TechTest/UserManagement.Services/obj/",
+      "outputPath": "/Users/Ishmael/Workspace/TechTest/UserManagement.Services/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/ishmael/.nuget/NuGet/NuGet.Config"
@@ -592,8 +592,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "/Users/Ishmael/github/TechTest/UserManagement.Data/UserManagement.Data.csproj": {
-              "projectPath": "/Users/Ishmael/github/TechTest/UserManagement.Data/UserManagement.Data.csproj"
+            "/Users/Ishmael/Workspace/TechTest/UserManagement.Data/UserManagement.Data.csproj": {
+              "projectPath": "/Users/Ishmael/Workspace/TechTest/UserManagement.Data/UserManagement.Data.csproj"
             }
           }
         }
