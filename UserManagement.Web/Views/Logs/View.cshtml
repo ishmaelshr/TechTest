@@ -1,0 +1,35 @@
+﻿@model UserManagement.Web.Models.Logs.LogViewModel
+
+<h2>Log View</h2>
+
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Action</th>
+                <th>TimeStamp</th>
+                <th>Details</th>
+                <th style="width: 1px;"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    @Model.Id
+                </td>
+                <td>
+                    @Model.Action
+                </td>
+                <td>
+                    @Model.TimeStamp
+                </td>
+                <td>
+                    @Model.Details
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <a asp-controller="Logs" asp-action="List" class="btn btn-default">Back</a>
+</div>
+

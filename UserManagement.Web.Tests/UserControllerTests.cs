@@ -20,7 +20,7 @@ public class UserControllerTests
         // Assert: Verifies that the action of the method under test behaves as expected.
         result.Model
             .Should().BeOfType<UserListViewModel>()
-            .Which.Items.Should().BeEquivalentTo(users);
+            .Which.User.Should().BeEquivalentTo(users);
     }
 
     private User[] SetupUsers(string forename = "Johnny", string surname = "User", string email = "juser@example.com", bool isActive = true)
@@ -44,5 +44,6 @@ public class UserControllerTests
     }
 
     private readonly Mock<IUserService> _userService = new();
-    private UsersController CreateController() => new(_userService.Object);
+    private readonly Mock<ILogService> _logService = new();
+    private UsersController CreateController() => new(_userService.Object, _logService.Object);
 }

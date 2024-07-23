@@ -2,6 +2,7 @@
 using System.Linq;
 using UserManagement.Models;
 using UserManagement.Services.Domain.Interfaces;
+using UserManagement.Web.Models.Logs;
 using UserManagement.Web.Models.Users;
 
 namespace UserManagement.WebMS.Controllers;
@@ -10,12 +11,17 @@ namespace UserManagement.WebMS.Controllers;
 public class UsersController : Controller
 {
     private readonly IUserService _userService;
-    public UsersController(IUserService userService) => _userService = userService;
+    private readonly ILogService _logService ;
+    public UsersController(IUserService userService, ILogService logService) {
+        _userService = userService;
+        _logService = logService;
+    }
+
 
     private UserListViewModel createUserListViewModel(IEnumerable<User> users){
-        var userListItemViewModel = users.Select(u => new UserListItemViewModel(u));
+        var userListItemViewModels = users.Select(u => new UserListItemViewModel(u));
         var userListViewModel = new UserListViewModel{
-            User = userListItemViewModel.ToList()
+            User = userListItemViewModels.ToList()
         };
         return userListViewModel;
     }
@@ -94,9 +100,17 @@ public class UsersController : Controller
         return RedirectToAction("Edit", new UserViewModel(_userService.Get(id)));
     }
 
+    private LogListViewModel createLogListViewModel(IEnumerable<Log> logs){
+        var logListItemViewModels = logs.Select(l => new LogListItemViewModel(l));
+        var logListViewModel = new LogListViewModel{
+            Logs = logListItemViewModels.ToList()
+        };
+        return logListViewModel;
+    }
+
     [HttpGet]
     [Route ("/view")]
     public ViewResult View(long id){
-        return View(new UserViewModel(_userService.Get(id)));
+        return View(new UserViewModel(_userService.Get(id), createLogListViewModel(_logService.FilterByUserId(id))));
     }
 }

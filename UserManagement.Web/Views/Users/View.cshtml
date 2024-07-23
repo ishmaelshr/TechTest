@@ -1,6 +1,7 @@
 @model UserManagement.Web.Models.Users.UserViewModel
 
 <h2>View User</h2>
+    <h5>Information</h5>
     <table class="table table-striped">
         <thead>
             <tr>
@@ -20,6 +21,26 @@
                 <td>@(Model.DateOfBirth.HasValue ? Model.DateOfBirth : "-")</td>
                 <td>@(Model.IsActive ? "Yes" : "No")</td>
             </tr>
+        </tbody>
+    </table> 
+    <h5>Logs</h5> 
+        <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Action</th>
+                <th>TimeStamp</th>
+                <th>Details</th>
+                <th style="width: 1px;"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var Log in Model.LogListViewModel.Logs){
+                <tr>
+                    <td>@Log.Action</td>
+                    <td>@Log.TimeStamp</td>
+                    <td>@Log.Details</td>
+                </tr>
+            }
         </tbody>
     </table>   
     <a asp-controller="Users" asp-action="List" class="btn btn-default">Back</a>
