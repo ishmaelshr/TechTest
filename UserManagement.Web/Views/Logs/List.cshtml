@@ -1,0 +1,36 @@
+﻿@model UserManagement.Web.Models.Logs.LogListViewModel
+
+<h2>Log List</h2>
+
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Action</th>
+                <th>TimeStamp</th>
+                <th style="width: 1px;"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var log in Model.Logs)
+            {
+                <tr>
+                    <td>
+                        @log.Id
+                    </td>
+                    <td>
+                        @log.Action
+                    </td>
+                    <td>
+                        @log.TimeStamp
+                    </td>
+                    <td>
+                        <a asp-controller="Logs" asp-action="View" asp-route-id="@log.Id">More</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TOrRlWbkn9Xyh4NYiBHv3VHQqmOHKe50ZZzlRUd1IuC7WsW8dMWQ4GYpB0Pkuy4GUY+SNQzyPGXE4blvxv/F4A==",
+  "dgSpecHash": "LT+pythsHgC6BifaYi1ONNCU0pR6HySnqU2KTeJcryG8JGPlwoMfyokn/gsfreaSWqxUMYz957OTTAFdu6Utlg==",
   "success": true,
-  "projectFilePath": "/Users/Ishmael/github/TechTest/UserManagement.Web.Tests/UserManagement.Web.Tests.csproj",
+  "projectFilePath": "/Users/Ishmael/Workspace/TechTest/UserManagement.Web.Tests/UserManagement.Web.Tests.csproj",
   "expectedPackageFiles": [
     "/Users/ishmael/.nuget/packages/castle.core/5.1.1/castle.core.5.1.1.nupkg.sha512",
     "/Users/ishmael/.nuget/packages/coverlet.collector/3.2.0/coverlet.collector.3.2.0.nupkg.sha512",

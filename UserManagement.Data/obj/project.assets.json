@@ -554,11 +554,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/Ishmael/github/TechTest/UserManagement.Data/UserManagement.Data.csproj",
+      "projectUniqueName": "/Users/Ishmael/Workspace/TechTest/UserManagement.Data/UserManagement.Data.csproj",
       "projectName": "UserManagement.Data",
-      "projectPath": "/Users/Ishmael/github/TechTest/UserManagement.Data/UserManagement.Data.csproj",
+      "projectPath": "/Users/Ishmael/Workspace/TechTest/UserManagement.Data/UserManagement.Data.csproj",
       "packagesPath": "/Users/ishmael/.nuget/packages/",
-      "outputPath": "/Users/Ishmael/github/TechTest/UserManagement.Data/obj/",
+      "outputPath": "/Users/Ishmael/Workspace/TechTest/UserManagement.Data/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/ishmael/.nuget/NuGet/NuGet.Config"
