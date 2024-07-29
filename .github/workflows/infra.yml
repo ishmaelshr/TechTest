@@ -1,0 +1,26 @@
+name: Infrastructure
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: DEV
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+    - name: Setup Azure CLI
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+    - name: Setup Terraform
+      uses: hashicorp/setup-terraform@v1
+      with:
+        cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
+    - name: Deploy terraform
+      working-directory: ./terraform
+      run: |
+       terraform init -backend=false
+       terraform apply --auto-approve -var SERVICE_NAME="${{ vars.SERVICE_NAME }}" -var ENVIRONMENT="${{ vars.ENVIRONMENT }}" -var LOCATION="${{ vars.LOCATION }}"

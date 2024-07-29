@@ -1,0 +1,28 @@
+name: Continuous Deployment
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: DEV
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+    - name: Setup Azure CLI
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+    - name: Download Artifact
+      uses: dawidd6/action-download-artifact@v6
+      with:
+        workflow: ci.yml
+        check_artifacts: true
+        name: Artifact
+    - name: Package & Deploy
+      run: |
+        zip -r artifacts.zip .  
+        az webapp deploy --resource-group "${{ vars.ENVIRONMENT }}"-"${{ vars.SERVICE_NAME }}"-rg --name "${{ vars.ENVIRONMENT }}"-"${{ vars.SERVICE_NAME }}"-app --src-path artifacts.zip
+

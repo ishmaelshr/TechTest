@@ -1,0 +1,12 @@
+/Users/Ishmael/Workspace/TechTest/UserManagement.Data/obj/Release/net7.0/UserManagement.Data.csproj.AssemblyReference.cache
+/Users/Ishmael/Workspace/TechTest/UserManagement.Data/obj/Release/net7.0/UserManagement.Data.GeneratedMSBuildEditorConfig.editorconfig
+/Users/Ishmael/Workspace/TechTest/UserManagement.Data/obj/Release/net7.0/UserManagement.Data.AssemblyInfoInputs.cache
+/Users/Ishmael/Workspace/TechTest/UserManagement.Data/obj/Release/net7.0/UserManagement.Data.AssemblyInfo.cs
+/Users/Ishmael/Workspace/TechTest/UserManagement.Data/obj/Release/net7.0/UserManagement.Data.csproj.CoreCompileInputs.cache
+/Users/Ishmael/Workspace/TechTest/UserManagement.Data/obj/Release/net7.0/UserManagement.Data.dll
+/Users/Ishmael/Workspace/TechTest/UserManagement.Data/obj/Release/net7.0/refint/UserManagement.Data.dll
+/Users/Ishmael/Workspace/TechTest/UserManagement.Data/obj/Release/net7.0/UserManagement.Data.pdb
+/Users/Ishmael/Workspace/TechTest/UserManagement.Data/bin/Release/net7.0/UserManagement.Data.deps.json
+/Users/Ishmael/Workspace/TechTest/UserManagement.Data/bin/Release/net7.0/UserManagement.Data.dll
+/Users/Ishmael/Workspace/TechTest/UserManagement.Data/bin/Release/net7.0/UserManagement.Data.pdb
+/Users/Ishmael/Workspace/TechTest/UserManagement.Data/obj/Release/net7.0/ref/UserManagement.Data.dll
